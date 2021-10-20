@@ -2,7 +2,7 @@ package lession1.hw1;
 
 public class HW_Cross {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //
 
         Athlete athlete1 = new Athlete("Jack", 3, 2, 0);
         Athlete athlete2 = new Athlete("Jane", 1, 0, 2);
