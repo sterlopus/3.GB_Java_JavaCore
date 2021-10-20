@@ -1,6 +1,6 @@
 package lession1.hw1;
 
-public class Cross {
+public class HW_Cross {
 
     public static void main(String[] args) {
 
