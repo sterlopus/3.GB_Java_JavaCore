@@ -1,0 +1,363 @@
+{
+  "Headline": {
+    "EffectiveDate": "2021-11-18T01:00:00+03:00",
+    "EffectiveEpochDate": 1637186400,
+    "Severity": 3,
+    "Text": "Mixed rain and snow late Wednesday night", ================
+    "Category": "snow/rain",
+    "EndDate": "2021-11-18T07:00:00+03:00",
+    "EndEpochDate": 1637208000,
+    "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?unit=c&lang=en-us"
+  },
+  "DailyForecasts": [
+    {
+      "Date": "2021-11-13T07:00:00+03:00",  ================
+      "EpochDate": 1636776000,
+      "Temperature": {
+        "Minimum": {
+          "Value": 0.1,       ==================
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 3.1,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Night": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=1&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=1&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2021-11-14T07:00:00+03:00",
+      "EpochDate": 1636862400,
+      "Temperature": {
+        "Minimum": {
+          "Value": -2,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 1.6,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 6,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Light"
+      },
+      "Night": {
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy",
+        "HasPrecipitation": false
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=2&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=2&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2021-11-15T07:00:00+03:00",
+      "EpochDate": 1636948800,
+      "Temperature": {
+        "Minimum": {
+          "Value": 0,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 1.1,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 6,
+        "IconPhrase": "Mostly cloudy",
+        "HasPrecipitation": false
+      },
+      "Night": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=3&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=3&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2021-11-16T07:00:00+03:00",
+      "EpochDate": 1637035200,
+      "Temperature": {
+        "Minimum": {
+          "Value": 1.6,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 5.3,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Night": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=4&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=4&unit=c&lang=en-us"
+    },
+    {
+      "Date": "2021-11-17T07:00:00+03:00",
+      "EpochDate": 1637121600,
+      "Temperature": {
+        "Minimum": {
+          "Value": 1.9,
+          "Unit": "C",
+          "UnitType": 17
+        },
+        "Maximum": {
+          "Value": 3.7,
+          "Unit": "C",
+          "UnitType": 17
+        }
+      },
+      "Day": {
+        "Icon": 8,
+        "IconPhrase": "Dreary",
+        "HasPrecipitation": false
+      },
+      "Night": {
+        "Icon": 29,
+        "IconPhrase": "Rain and snow",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Mixed",
+        "PrecipitationIntensity": "Light"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=5&unit=c&lang=en-us",
+      "Link": "http://www.accuweather.com/en/ru/saint-petersburg/295212/daily-weather-forecast/295212?day=5&unit=c&lang=en-us"
+    }
+  ]
+}
+
+
+
+========================================================================
+
+
+// Welcome1.java
+
+package io.codebeautify;
+
+public class Welcome1 {
+private Headline headline;
+private DailyForecast[] dailyForecasts;
+
+public Headline getHeadline() { return headline; }
+public void setHeadline(Headline value) { this.headline = value; }
+
+public DailyForecast[] getDailyForecasts() { return dailyForecasts; }
+public void setDailyForecasts(DailyForecast[] value) { this.dailyForecasts = value; }
+}
+
+// DailyForecast.java
+
+package io.codebeautify;
+
+import java.time.OffsetDateTime;
+
+public class DailyForecast {
+private OffsetDateTime date;
+private long epochDate;
+private Temperature temperature;
+private Day day;
+private Day night;
+private String[] sources;
+private String mobileLink;
+private String link;
+
+public OffsetDateTime getDate() { return date; }
+public void setDate(OffsetDateTime value) { this.date = value; }
+
+public long getEpochDate() { return epochDate; }
+public void setEpochDate(long value) { this.epochDate = value; }
+
+public Temperature getTemperature() { return temperature; }
+public void setTemperature(Temperature value) { this.temperature = value; }
+
+public Day getDay() { return day; }
+public void setDay(Day value) { this.day = value; }
+
+public Day getNight() { return night; }
+public void setNight(Day value) { this.night = value; }
+
+public String[] getSources() { return sources; }
+public void setSources(String[] value) { this.sources = value; }
+
+public String getMobileLink() { return mobileLink; }
+public void setMobileLink(String value) { this.mobileLink = value; }
+
+public String getLink() { return link; }
+public void setLink(String value) { this.link = value; }
+}
+
+// Day.java
+
+package io.codebeautify;
+
+public class Day {
+private long icon;
+private String iconPhrase;
+private boolean hasPrecipitation;
+private String precipitationType;
+private String precipitationIntensity;
+
+public long getIcon() { return icon; }
+public void setIcon(long value) { this.icon = value; }
+
+public String getIconPhrase() { return iconPhrase; }
+public void setIconPhrase(String value) { this.iconPhrase = value; }
+
+public boolean getHasPrecipitation() { return hasPrecipitation; }
+public void setHasPrecipitation(boolean value) { this.hasPrecipitation = value; }
+
+public String getPrecipitationType() { return precipitationType; }
+public void setPrecipitationType(String value) { this.precipitationType = value; }
+
+public String getPrecipitationIntensity() { return precipitationIntensity; }
+public void setPrecipitationIntensity(String value) { this.precipitationIntensity = value; }
+}
+
+// Temperature.java
+
+package io.codebeautify;
+
+public class Temperature {
+private Imum minimum;
+private Imum maximum;
+
+public Imum getMinimum() { return minimum; }
+public void setMinimum(Imum value) { this.minimum = value; }
+
+public Imum getMaximum() { return maximum; }
+public void setMaximum(Imum value) { this.maximum = value; }
+}
+
+// Imum.java
+
+package io.codebeautify;
+
+public class Imum {
+private double value;
+private Unit unit;
+private long unitType;
+
+public double getValue() { return value; }
+public void setValue(double value) { this.value = value; }
+
+public Unit getUnit() { return unit; }
+public void setUnit(Unit value) { this.unit = value; }
+
+public long getUnitType() { return unitType; }
+public void setUnitType(long value) { this.unitType = value; }
+}
+
+// Unit.java
+
+package io.codebeautify;
+
+import java.io.IOException;
+
+public enum Unit {
+C;
+
+public String toValue() {
+switch (this) {
+case C: return "C";
+}
+return null;
+}
+
+public static Unit forValue(String value) throws IOException {
+if (value.equals("C")) return C;
+throw new IOException("Cannot deserialize Unit");
+}
+}
+
+// Headline.java
+
+package io.codebeautify;
+
+import java.time.OffsetDateTime;
+
+public class Headline {
+private OffsetDateTime effectiveDate;
+private long effectiveEpochDate;
+private long severity;
+private String text;
+private String category;
+private OffsetDateTime endDate;
+private long endEpochDate;
+private String mobileLink;
+private String link;
+
+public OffsetDateTime getEffectiveDate() { return effectiveDate; }
+public void setEffectiveDate(OffsetDateTime value) { this.effectiveDate = value; }
+
+public long getEffectiveEpochDate() { return effectiveEpochDate; }
+public void setEffectiveEpochDate(long value) { this.effectiveEpochDate = value; }
+
+public long getSeverity() { return severity; }
+public void setSeverity(long value) { this.severity = value; }
+
+public String getText() { return text; }
+public void setText(String value) { this.text = value; }
+
+public String getCategory() { return category; }
+public void setCategory(String value) { this.category = value; }
+
+public OffsetDateTime getEndDate() { return endDate; }
+public void setEndDate(OffsetDateTime value) { this.endDate = value; }
+
+public long getEndEpochDate() { return endEpochDate; }
+public void setEndEpochDate(long value) { this.endEpochDate = value; }
+
+public String getMobileLink() { return mobileLink; }
+public void setMobileLink(String value) { this.mobileLink = value; }
+
+public String getLink() { return link; }
+public void setLink(String value) { this.link = value; }
+}
