@@ -13,10 +13,20 @@ public class FiveDaysWeatherResponse {
 
 
     // getters
-    public Headline getHeadline() { return headline; }
-    public DailyForecast[] getDailyForecasts() { return dailyForecasts; }
+    public Headline getHeadline() {
+        return headline;
+    }
 
     // setters
-    public void setHeadline(Headline value) { this.headline = value; }
-    public void setDailyForecasts(DailyForecast[] value) { this.dailyForecasts = value; }
+    public void setHeadline(Headline value) {
+        this.headline = value;
+    }
+
+    public DailyForecast[] getDailyForecasts() {
+        return dailyForecasts;
+    }
+
+    public void setDailyForecasts(DailyForecast[] value) {
+        this.dailyForecasts = value;
+    }
 }

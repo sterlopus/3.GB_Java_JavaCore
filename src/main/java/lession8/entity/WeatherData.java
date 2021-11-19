@@ -42,12 +42,22 @@ public class WeatherData {
         this.text = text;
     }
 
-    public float  getTemperature() {
+    public float getTemperature() {
         return temperature;
     }
 
     public void setTemperature(float temperature) {
         this.temperature = temperature;
+    }
+
+    @Override
+    public String toString() {
+        return "WeatherData{" +
+                "city='" + city + '\'' +
+                ", localDate='" + localDate + '\'' +
+                ", text='" + text + '\'' +
+                ", temperature=" + temperature +
+                '}';
     }
 
     public void print() {

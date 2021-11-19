@@ -11,13 +11,10 @@ public class UserInterface {
     public void runApplication() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Input city name: ");
-            String city = scanner.nextLine();
 
-            setGlobalCity(city);
 
             System.out.println("Enter choice number: 1 - Get weather report, " +
-                "2 - Get weather forecast for next 5 days, 3 - Get all history of queries, 0 or exit - close application.");
+                    "2 - Get weather forecast for next 5 days, 3 - Get all history of queries, 0 or exit - close application.");
             String result = scanner.nextLine();
 
             checkIsExit(result);
@@ -27,6 +24,12 @@ public class UserInterface {
             } catch (IOException e) {
                 e.printStackTrace();
                 continue;
+            }
+
+            if (result.equals("1") || result.equals("2")) {
+                System.out.println("Input city name: ");
+                String city = scanner.nextLine();
+                setGlobalCity(city);
             }
 
             try {
@@ -39,7 +42,7 @@ public class UserInterface {
     }
 
     private void checkIsExit(String result) {
-        if (result.toLowerCase().equals("exit") || result.toLowerCase().equals("0")) {
+        if (result.equalsIgnoreCase("exit") || result.equalsIgnoreCase("0")) {
             System.out.println("Application closed by user.");
             System.exit(0);
         }
@@ -53,9 +56,8 @@ public class UserInterface {
         if (userInput == null || userInput.length() != 1) {
             throw new IOException("Incorrect user input: expected one digit as answer, but actually get " + userInput);
         }
-        int answer = 0;
         try {
-            answer = Integer.parseInt(userInput);
+            Integer.parseInt(userInput);
         } catch (NumberFormatException e) {
             throw new IOException("Incorrect user input: character is not numeric!");
         }

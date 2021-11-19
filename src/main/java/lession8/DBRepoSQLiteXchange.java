@@ -32,8 +32,7 @@ public class DBRepoSQLiteXchange implements DatabaseRepository {
 
     // methods
     private Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection("jdbc:sqlite:" + dbFilename);
-        return connection;
+        return DriverManager.getConnection("jdbc:sqlite:" + dbFilename);
     }
 
     private void createTableIfNotExist() {
@@ -49,10 +48,10 @@ public class DBRepoSQLiteXchange implements DatabaseRepository {
         createTableIfNotExist();
         try (Connection connection = getConnection();
              PreparedStatement saveWeather = connection.prepareStatement(addWeatherDataQuery)) {
-                    saveWeather.setString(1, weatherData.getCity());
-                    saveWeather.setString(2, weatherData.getLocalDate());
-                    saveWeather.setString(3, weatherData.getText());
-                    saveWeather.setFloat(4, weatherData.getTemperature());
+            saveWeather.setString(1, weatherData.getCity());
+            saveWeather.setString(2, weatherData.getLocalDate());
+            saveWeather.setString(3, weatherData.getText());
+            saveWeather.setFloat(4, weatherData.getTemperature());
             saveWeather.executeUpdate();
             connection.close();
             return;
@@ -62,53 +61,28 @@ public class DBRepoSQLiteXchange implements DatabaseRepository {
         throw new SQLException("Error at saving data to DB attempt");
     }
 
-/*   // TODO: wrong method, delete after all
     @Override
     public List<WeatherData> getAllSavedData() {
-        // TODO: make method returning data from DB (print to console)
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM weather");
-            connection.close();
 
             List<WeatherData> weatherDataList = new ArrayList<>();
+
             while (resultSet.next()) {
-                WeatherData wd = new WeatherData();
-                    wd.setCity(resultSet.getString("city"));
-                    wd.setLocalDate(resultSet.getString("date"));
-                    wd.setText(resultSet.getString("condition"));
-                    wd.setTemperature(resultSet.getFloat("temperature"));
-                weatherDataList.add(wd);
+                weatherDataList.add(new WeatherData(
+                        resultSet.getString("city"),
+                        resultSet.getString("date"),
+                        resultSet.getString("condition"),
+                        resultSet.getFloat("temperature")
+                ));
             }
-        return weatherDataList;
+            return weatherDataList;
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
-    }
-*/
-    @Override
-    public void getAllFromDB() {
-        try (Connection connection = getConnection()) {
-
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM weather");
-            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
-            int columnNumbers = resultSetMetaData.getColumnCount();
-            for (int i = 2; i <= columnNumbers; i++) {
-                System.out.print(resultSetMetaData.getColumnName(i)+"\t\t\t");
-            }
-            while (resultSet.next()) {
-                System.out.printf("%n%s\t\t\t%s\t\t\t%s\t\t\t%f",
-                        resultSet.getString("city"),
-                        resultSet.getString("date"),
-                        resultSet.getString("condition"),
-                        resultSet.getFloat("temperature"));
-            }
-            System.out.println("\n");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
 }

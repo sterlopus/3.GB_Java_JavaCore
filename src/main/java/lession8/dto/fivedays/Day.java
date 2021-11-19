@@ -6,15 +6,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Day {
 
-//    private long icon;
+    //    private long icon;
     @JsonProperty(value = "IconPhrase")
     private String iconPhrase;
 //    private boolean hasPrecipitation;
 //    private String precipitationType;
 //    private String precipitationIntensity;
 
-    public String getIconPhrase() { return iconPhrase; }
-    public void setIconPhrase(String value) { this.iconPhrase = value; }
+    public String getIconPhrase() {
+        return iconPhrase;
+    }
+
+    public void setIconPhrase(String value) {
+        this.iconPhrase = value;
+    }
 
 /*
     public long getIcon() { return icon; }

@@ -20,20 +20,20 @@ public class TemperatureData {
         return Unit;
     }
 
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
     public float getUnitType() {
         return UnitType;
+    }
+
+    public void setUnitType(float UnitType) {
+        this.UnitType = UnitType;
     }
 
     // Setter Methods
     public void setValue(float temperatureValue) {
         this.temperatureValue = temperatureValue;
-    }
-
-    public void setUnit(String Unit) {
-        this.Unit = Unit;
-    }
-
-    public void setUnitType(float UnitType) {
-        this.UnitType = UnitType;
     }
 }

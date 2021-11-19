@@ -7,12 +7,13 @@ import lession8.enums.Periods;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Controller {
 
     WeatherProvider weatherProvider = new AccuWeatherProvider();
-    Map<Integer, Functionality> variantResult = new HashMap();
+    Map<Integer, Functionality> variantResult = new HashMap<>();
     DatabaseRepository repoSQLiteXchange = new DBRepoSQLiteXchange();
     WeatherData weatherData = new WeatherData();
 
@@ -55,8 +56,11 @@ public class Controller {
         weatherProvider.getWeather(Periods.FIVE_DAYS);
     }
 
-    public void getAllFromDatabase() {
-        repoSQLiteXchange.getAllFromDB();
+    public void getAllFromDatabase() throws IOException {
+        List<WeatherData> weatherDataList = repoSQLiteXchange.getAllSavedData();
+        for (WeatherData weatherData : weatherDataList) {
+            System.out.println(weatherData);
+        }
     }
 
 }

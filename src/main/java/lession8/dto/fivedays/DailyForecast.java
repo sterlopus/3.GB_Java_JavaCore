@@ -23,14 +23,29 @@ public class DailyForecast {
 //    public OffsetDateTime getDate() { return date; }
 //    public void setDate(OffsetDateTime value) { this.date = value; }
 
-    public long getEpochDate() { return epochDate; }
-    public void setEpochDate(long value) { this.epochDate = value; }
+    public long getEpochDate() {
+        return epochDate;
+    }
 
-    public FiveDayTemperature getTemperature() { return temperature; }
-    public void setTemperature(FiveDayTemperature value) { this.temperature = value; }
+    public void setEpochDate(long value) {
+        this.epochDate = value;
+    }
 
-    public Day getDay() { return day; }
-    public void setDay(Day value) { this.day = value; }
+    public FiveDayTemperature getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(FiveDayTemperature value) {
+        this.temperature = value;
+    }
+
+    public Day getDay() {
+        return day;
+    }
+
+    public void setDay(Day value) {
+        this.day = value;
+    }
 /*
     public Day getNight() { return night; }
     public void setNight(Day value) { this.night = value; }

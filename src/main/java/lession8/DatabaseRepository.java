@@ -12,7 +12,6 @@ public interface DatabaseRepository {
 
     void saveWeatherData(WeatherData weatherData) throws SQLException;
 
-//    List<WeatherData> getAllSavedData() throws IOException;  TODO: wrong method delete after all
+    List<WeatherData> getAllSavedData() throws IOException;
 
-    void getAllFromDB();
 }

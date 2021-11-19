@@ -8,21 +8,27 @@ public class Headline {
 
     @JsonProperty(value = "EffectiveDate")
     private String effectiveDate;
-/*
-    private long effectiveEpochDate;
-    private long severity;
 
-    @JsonProperty(value = "Text")
-    private String text;
+    /*
+        private long effectiveEpochDate;
+        private long severity;
 
-    private String category;
-    private OffsetDateTime endDate;
-    private long endEpochDate;
-    private String mobileLink;
-    private String link;
-*/
-    public String getEffectiveDate() { return effectiveDate; }
-    public void setEffectiveDate(String value) { this.effectiveDate = value; }
+        @JsonProperty(value = "Text")
+        private String text;
+
+        private String category;
+        private OffsetDateTime endDate;
+        private long endEpochDate;
+        private String mobileLink;
+        private String link;
+    */
+    public String getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    public void setEffectiveDate(String value) {
+        this.effectiveDate = value;
+    }
 /*
     public long getEffectiveEpochDate() { return effectiveEpochDate; }
     public void setEffectiveEpochDate(long value) { this.effectiveEpochDate = value; }

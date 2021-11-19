@@ -6,10 +6,10 @@ import lession8.ApplicationGlobalState;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherResponse {
-        @JsonProperty("WeatherText")
-        private String weatherText;
-        @JsonProperty("Temperature")
-        Temperature temperature;
+    @JsonProperty("Temperature")
+    Temperature temperature;
+    @JsonProperty("WeatherText")
+    private String weatherText;
 //        @JsonIgnore
 //        private String city;
 
@@ -26,12 +26,12 @@ public class WeatherResponse {
         return weatherText;
     }
 
-    public Temperature getTemperature() {
-        return temperature;
-    }
-
     public void setWeatherText(String weatherText) {
         this.weatherText = weatherText;
+    }
+
+    public Temperature getTemperature() {
+        return temperature;
     }
 
     public void setTemperature(Temperature temperature) {
@@ -41,7 +41,7 @@ public class WeatherResponse {
 
     public void print() {
         System.out.println("========================================================================++++++++++++++++");
-        System.out.println( ApplicationGlobalState.getInstance().getSelectedCity() + ": the weather conditions is: " + weatherText +
+        System.out.println(ApplicationGlobalState.getInstance().getSelectedCity() + ": the weather conditions is: " + weatherText +
                 " and the temperature is " + temperature.getMetric().getTemperatureValue() + "C");
         System.out.println("========================================================================++++++++++++++++");
     }

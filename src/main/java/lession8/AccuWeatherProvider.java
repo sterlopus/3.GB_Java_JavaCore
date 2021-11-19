@@ -12,9 +12,9 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -36,18 +36,18 @@ public class AccuWeatherProvider implements WeatherProvider {
 
         if (periods.equals(Periods.NOW)) { // TODAY REPORT
             HttpUrl url = new HttpUrl.Builder()
-                .scheme(SCHEME)
-                .host(HOST)
-                .addPathSegment(CURRENT_CONDITIONS_ENDPOINT)
-                .addPathSegment(API_VERSION)
-                .addPathSegment(cityKey)
-                .addQueryParameter("apikey", API_KEY)
-                .build();
+                    .scheme(SCHEME)
+                    .host(HOST)
+                    .addPathSegment(CURRENT_CONDITIONS_ENDPOINT)
+                    .addPathSegment(API_VERSION)
+                    .addPathSegment(cityKey)
+                    .addQueryParameter("apikey", API_KEY)
+                    .build();
 
             Request request = new Request.Builder()
-                .addHeader("accept", "application/json")
-                .url(url)
-                .build();
+                    .addHeader("accept", "application/json")
+                    .url(url)
+                    .build();
 
             Response response = client.newCall(request).execute();
             JavaType type = objectMapper.getTypeFactory().constructCollectionType(List.class, WeatherResponse.class);
@@ -60,8 +60,7 @@ public class AccuWeatherProvider implements WeatherProvider {
                     weatherResponses.get(0).getTemperature().getMetric().getTemperatureValue()
             );
             return weatherData;
-        } else
-        if ( periods.equals(Periods.FIVE_DAYS))    // 5 DAYS FORECAST PART
+        } else if (periods.equals(Periods.FIVE_DAYS))    // 5 DAYS FORECAST PART
         {
             HttpUrl url = new HttpUrl.Builder()
                     .scheme(SCHEME)
@@ -84,17 +83,20 @@ public class AccuWeatherProvider implements WeatherProvider {
 
             FiveDaysWeatherResponse fiveDaysWeatherResponse = objectMapper.readValue(response.body().string(),
                     FiveDaysWeatherResponse.class);
-            // Todo: send data to WeatherData[] object and return it, than use WeatherData.print() at Controller
 /*
-            ArrayList<WeatherData> testVar = null;
+            // Todo: send data to WeatherData[] object and return it, than use WeatherData.print() at Controller
+            //  didnt decide how to deliver List to Controller
+
+            List<WeatherData> testVar = new ArrayList<>();
             for (DailyForecast day : fiveDaysWeatherResponse.getDailyForecasts()) {
-                testVar.add(new WeatherData(ApplicationGlobalState.getInstance().getSelectedCity(),
+                testVar.add(new WeatherData(
+                        ApplicationGlobalState.getInstance().getSelectedCity(),
                         LocalDate.ofEpochDay(TimeUnit.SECONDS.toDays(day.getEpochDate())).toString(),
                         day.getDay().getIconPhrase(),
                         day.getTemperature().getMaximum().getValue()
                 ));
             }
-            return testVar.asArray;
+            return testVar;
 */
             for (DailyForecast day : fiveDaysWeatherResponse.getDailyForecasts()) {
                 LocalDate date = LocalDate.ofEpochDay(TimeUnit.SECONDS.toDays(day.getEpochDate()));
@@ -111,26 +113,26 @@ public class AccuWeatherProvider implements WeatherProvider {
         String selectedCity = ApplicationGlobalState.getInstance().getSelectedCity();
 
         HttpUrl detectLocationURL = new HttpUrl.Builder()
-            .scheme(SCHEME)
-            .host(HOST)
-            .addPathSegment("locations")
-            .addPathSegment(API_VERSION)
-            .addPathSegment("cities")
-            .addPathSegment("autocomplete")
-            .addQueryParameter("apikey", API_KEY)
-            .addQueryParameter("q", selectedCity)
-            .build();
+                .scheme(SCHEME)
+                .host(HOST)
+                .addPathSegment("locations")
+                .addPathSegment(API_VERSION)
+                .addPathSegment("cities")
+                .addPathSegment("autocomplete")
+                .addQueryParameter("apikey", API_KEY)
+                .addQueryParameter("q", selectedCity)
+                .build();
 
         Request request = new Request.Builder()
-            .addHeader("accept", "application/json")
-            .url(detectLocationURL)
-            .build();
+                .addHeader("accept", "application/json")
+                .url(detectLocationURL)
+                .build();
 
         Response response = client.newCall(request).execute();
 
         if (!response.isSuccessful()) {
             throw new IOException("Unable to find city information. " +
-                "Server response code = " + response.code() + "\nresponse body = " + response.body().string());
+                    "Server response code = " + response.code() + "\nresponse body = " + response.body().string());
         }
         String jsonResponse = response.body().string();
         System.out.println("Looking for city: " + selectedCity);

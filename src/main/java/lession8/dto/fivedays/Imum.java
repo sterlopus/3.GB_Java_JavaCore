@@ -18,8 +18,13 @@ public class Imum {
 */
 
 
-    public float getValue() { return value; }
-    public void setValue(float value) { this.value = value; }
+    public float getValue() {
+        return value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
+    }
 /*
     public Unit getUnit() { return unit; }
     public void setUnit(Unit value) { this.unit = value; }

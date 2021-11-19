@@ -11,9 +11,19 @@ public class FiveDayTemperature {
     @JsonProperty(value = "Maximum")
     private Imum maximum;
 
-    public Imum getMinimum() { return minimum; }
-    public void setMinimum(Imum value) { this.minimum = value; }
+    public Imum getMinimum() {
+        return minimum;
+    }
 
-    public Imum getMaximum() { return maximum; }
-    public void setMaximum(Imum value) { this.maximum = value; }
+    public void setMinimum(Imum value) {
+        this.minimum = value;
+    }
+
+    public Imum getMaximum() {
+        return maximum;
+    }
+
+    public void setMaximum(Imum value) {
+        this.maximum = value;
+    }
 }
